@@ -5,7 +5,7 @@ const axios = require("axios");
 
 router.get("", async (req, res) => {
   try {
-    console.log("trig");
+    // console.log("trig");
     // Avec postman, quand on met des Params dans la requête en get, on les récupère dans req.query
     // TODO Définir les constantes name/limit/skip en dehors de const response et les appeler dans les params
     const name = req.query.name || "";

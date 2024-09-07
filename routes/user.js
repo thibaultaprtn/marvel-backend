@@ -83,17 +83,8 @@ router.post("/login", login);
 
 // TODO il faudrait rajouter un middleware isAuthorized qui vérifie que le token et l'id sont bien assocés
 
-router.put(
-  "/update/:id",
-  async (req, res, next) => {
-    // console.log(req);
-    return next();
-  },
-  isAuthenticated,
-  update,
-  (req, res) => {
-    res.status(200).json({ message: "Le profil a bien été mis à jour" });
-  }
-);
+router.put("/update/:id", isAuthenticated, update, (req, res) => {
+  res.status(200).json({ message: "Le profil a bien été mis à jour" });
+});
 
 module.exports = router;

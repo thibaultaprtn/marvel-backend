@@ -15,7 +15,7 @@ router.get("/:id", async (req, res) => {
         },
       }
     );
-    console.log(response.data);
+    // console.log(response.data);
     res.status(200).json(response.data);
   } catch (error) {
     res.status(200).json({ message: error.message });

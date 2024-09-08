@@ -13,7 +13,7 @@ const signUp = async (req, res, next) => {
     let { username, email, password } = req.body;
     // console.log(typeof newsletter);
     if (!username || !email || !password) {
-      console.log(req.body);
+      // console.log(req.body);
       return res
         .status(400)
         .json({ message: "Il manque un paramètre dans les champs d'entrée" });

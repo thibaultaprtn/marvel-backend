@@ -36,6 +36,7 @@ router.get("", async (req, res) => {
 //Route pour obtenir l'ensemble des comics relatifs à l'id d'un character
 
 router.get("/:id", async (req, res) => {
+  // console.log(req.params.id);
   try {
     const response = await axios.get(
       `${process.env.API_URL}/comics/${req.params.id}`,

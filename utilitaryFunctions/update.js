@@ -5,11 +5,11 @@ const User = require("../models/User");
 const update = async (req, res, next) => {
   try {
     // console.log(req.body, req.params.id);
-    console.log(req.body.tabtemp);
+    // console.log(req.body.tabtemp);
     let user = await User.findById(req.body.id);
-    console.log("success", user.favorites[req.body.category]);
+    // console.log("success", user.favorites[req.body.category]);
     user.favorites[req.body.category] = req.body.tabtemp;
-    console.log(user);
+    // console.log(user);
     await user.save();
     next();
   } catch (error) {
